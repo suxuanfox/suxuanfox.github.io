@@ -1,6 +1,7 @@
 ---
 layout: home
 title: 主页
+body_class: home
 ---
 
 我主要对
