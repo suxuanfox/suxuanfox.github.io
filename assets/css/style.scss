@@ -3,9 +3,7 @@
 
 @import "minima";
 
-/* ---------------------------
-   全局字体与颜色
----------------------------- */
+/* 全局字体与颜色 */
 body {
   font-family:
     "Source Han Serif SC",
@@ -15,8 +13,7 @@ body {
     serif;
 
   color: #222;
-  background-color: #ffffff;
-  position: relative; /* 为伪元素定位 */
+  position: relative; /* 伪元素定位 */
 }
 
 /* 无衬线元素使用思源黑体 */
@@ -34,31 +31,26 @@ button {
 
 /* ---------------------------
    固定背景层
+   首页 vs 其他页面
 ---------------------------- */
 body::before {
   content: "";
   position: fixed;
   top: 0; left: 0; right: 0;
-  height: auto;
   width: 100%;
-  z-index: -1; /* 保证在内容下方 */
+  z-index: -1;
   background-repeat: no-repeat;
-  background-size: 100% auto; /* 横向铺满，纵向自适应 */
+  background-size: 100% auto;   /* 横向铺满 */
   background-position: top center;
 }
 
-/* 首页背景 */
+/* 首页专属背景 */
 body.home::before {
   background-image: url('{{ "/assets/img/lantingxu.jpg" | relative_url }}');
 }
 
-/* Notes 页面背景 */
-body.notes::before {
-  background-image: url('{{ "/assets/img/qianli.jpg" | relative_url }}');
-}
-
-/* Others 页面背景 */
-body.others::before {
+/* 其他页面统一背景 */
+body:not(.home)::before {
   background-image: url('{{ "/assets/img/qianli.jpg" | relative_url }}');
 }
 
@@ -73,17 +65,13 @@ body.others::before {
   margin: auto;
 }
 
-/* ---------------------------
-   标题
----------------------------- */
+/* 标题 */
 h1, h2, h3, h4 {
   color: #111;
   font-weight: 500;
 }
 
-/* ---------------------------
-   链接颜色
----------------------------- */
+/* 链接颜色 */
 a {
   color: #3b5cff;
   text-decoration: none;
@@ -94,9 +82,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ---------------------------
-   导航栏
----------------------------- */
+/* 导航栏 */
 .site-header {
   border-bottom: 1px solid #e5e5e5;
 }
@@ -104,16 +90,4 @@ a:hover {
 .site-title {
   color: #111 !important;
   font-weight: 600;
-}
-
-/* ---------------------------
-   TOC 样式
----------------------------- */
-nav ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-nav ul li {
-  margin: 4px 0;
 }
