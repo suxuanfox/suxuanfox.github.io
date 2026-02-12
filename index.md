@@ -11,6 +11,7 @@ body_class: home
 - （微分和代数）几何
 
 等方面感兴趣。
+![测试图片](/assets/img/lantingxu.jpg)
 
 ---
 <br>
