@@ -5,7 +5,9 @@ permalink: /notes/
 toc: true
 body_class: page
 ---
+---
 ![千里江山图](/assets/img/qianli.jpg)
+---
 {:toc}
 
 #### 随机分析
