@@ -3,7 +3,9 @@
 
 @import "minima";
 
-/* 全局字体与颜色 */
+/* ---------------------------
+   全局字体与颜色
+---------------------------- */
 body {
   font-family:
     "Source Han Serif SC",
@@ -14,6 +16,7 @@ body {
 
   color: #222;
   background-color: #ffffff;
+  position: relative; /* 为伪元素定位 */
 }
 
 /* 无衬线元素使用思源黑体 */
@@ -29,34 +32,39 @@ button {
     sans-serif;
 }
 
-/* 全局背景设置，默认不显示背景 */
-body {
-  background-color: #ffffff;
+/* ---------------------------
+   固定背景层
+---------------------------- */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: auto;
+  width: 100%;
+  z-index: -1; /* 保证在内容下方 */
   background-repeat: no-repeat;
-  background-size: auto 100%;  /* 高度自适应填充 */
-  background-position: top center; /* 靠上并水平居中 */
-}
-
-/* 页面背景 */
-body.home {
-  background-image: url('/assets/img/lantingxu.jpg');
-  background-size: 100% auto;
+  background-size: 100% auto; /* 横向铺满，纵向自适应 */
   background-position: top center;
 }
 
-body.notes {
-  background-image: url('/assets/img/qianli.jpg');
-  background-size: 100% auto;
-  background-position: top center;
+/* 首页背景 */
+body.home::before {
+  background-image: url('{{ "/assets/img/lantingxu.jpg" | relative_url }}');
 }
 
-body.others {
-  background-image: url('/assets/img/qianli.jpg');
-  background-size: 100% auto;
-  background-position: top center;
+/* Notes 页面背景 */
+body.notes::before {
+  background-image: url('{{ "/assets/img/qianli.jpg" | relative_url }}');
 }
 
-/* 内容区域半透明遮罩 */
+/* Others 页面背景 */
+body.others::before {
+  background-image: url('{{ "/assets/img/qianli.jpg" | relative_url }}');
+}
+
+/* ---------------------------
+   内容区域半透明遮罩
+---------------------------- */
 .wrapper {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
@@ -65,13 +73,17 @@ body.others {
   margin: auto;
 }
 
-/* 标题 */
+/* ---------------------------
+   标题
+---------------------------- */
 h1, h2, h3, h4 {
   color: #111;
   font-weight: 500;
 }
 
-/* 链接颜色（blue / violet） */
+/* ---------------------------
+   链接颜色
+---------------------------- */
 a {
   color: #3b5cff;
   text-decoration: none;
@@ -82,7 +94,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 导航栏 */
+/* ---------------------------
+   导航栏
+---------------------------- */
 .site-header {
   border-bottom: 1px solid #e5e5e5;
 }
@@ -92,12 +106,9 @@ a:hover {
   font-weight: 600;
 }
 
-/* 页面宽度更学术风 */
-.wrapper {
-  max-width: 720px;
-}
-
-/* TOC 样式 */
+/* ---------------------------
+   TOC 样式
+---------------------------- */
 nav ul {
   list-style: none;
   padding-left: 0;
@@ -106,4 +117,3 @@ nav ul {
 nav ul li {
   margin: 4px 0;
 }
-
