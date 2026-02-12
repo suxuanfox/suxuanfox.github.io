@@ -1,0 +1,118 @@
+"[latex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop",
+
+},
+       "latex-workshop.intellisense.unimathsymbols.enabled": true,
+        "latex-workshop.latex.recipes": [
+    {
+        "name": "xelatex",
+        "tools": [
+            "xelatex"
+        ]
+    },
+    {
+        "name": "xe->bib->xe->xe",
+        "tools": [
+            "xelatex",
+            "bibtex",
+            "xelatex",
+            "xelatex"
+        ]
+    },
+    {
+        "name": "xe+biber+xe*2", 
+        "tools": [
+            "xelatex",
+            "biber",
+            "xelatex",
+            "xelatex"
+        ]
+    }
+],
+
+        "latex-workshop.latex.tools": [
+            {
+                "name": "xelatex",
+                "command": "xelatex",
+                "args": [
+                    //"-synctex=1",
+                    "-interaction=nonstopmode",
+                    "-file-line-error",
+                    "-outdir=%OUTDIR%",
+                    "-shell-escape",
+                    "%DOCFILE%"
+                ],
+                "env": {}
+            },
+            {
+                "name": "pdflatex",
+                "command": "pdflatex",
+                "args": [
+                    "-synctex=1",
+                    "-interaction=nonstopmode",
+                    "-file-line-error",
+                    "%DOCFILE%"
+                ]
+            },
+            {
+                "name": "bibtex",
+                "command": "bibtex",
+                "args": [
+                    "%DOCFILE%"
+                ]
+            },
+            {
+        "name": "biber", 
+        "command": "biber",
+        "args": [
+            "%DOCFILE%"
+        ]
+    }
+            
+        ],
+        
+        "latex-workshop.view.pdf.viewer": "external",
+        "latex-workshop.view.pdf.external.viewer.command": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+        "latex-workshop.view.pdf.ref.viewer":"external",
+        "latex-workshop.view.pdf.external.viewer.args": [
+            "%PDF%"
+        ],
+        "latex-workshop.view.pdf.external.synctex.command": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+        "latex-workshop.view.pdf.external.synctex.args": [
+           "-forward-search",
+           "%TEX%",
+           "%LINE%",
+           "%PDF%",
+],
+"latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.brf",
+    "*.blg",
+    "*.idx",
+    "*.ind",
+    "*.ilg",
+    "*.lof",
+    "*.lot",
+    "*.out",
+    "*.toc",
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.glg",
+    "*.glo",
+    "*.gls",
+    "*.ist",
+    "*.fls",
+    "*.log",
+    "*.fdb_latexmk",
+    "*.synctex.gz",
+    "*.synctex"
+],
+"latex-workshop.latex.autoClean.run": "onBuilt",
+//"latex-workshop.latex.autoBuild.interval": 30000,
+    // 默认使用上一次的编译方案
+"latex-workshop.latex.recipe.default": "lastUsed",
+"workbench.editorAssociations": {
+    "*.pdf": "latex-workshop-pdf-hook"
+}
