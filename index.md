@@ -1,6 +1,6 @@
 ---
 layout: home
-title: 素以为绚兮
+title: 素以为绚兮，绘事后素
 body_class: home
 ---
 
