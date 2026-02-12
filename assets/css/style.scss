@@ -29,17 +29,31 @@ button {
     sans-serif;
 }
 
+/* 全局背景设置，默认不显示背景 */
+body {
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: auto 100%;  /* 高度自适应填充 */
+  background-position: top center; /* 靠上并水平居中 */
+}
+
 /* 页面背景 */
 body.home {
   background-image: url('/assets/img/lantingxu.jpg');
+  background-size: 100% auto;
+  background-position: top center;
 }
 
 body.notes {
   background-image: url('/assets/img/qianli.jpg');
+  background-size: 100% auto;
+  background-position: top center;
 }
 
 body.others {
   background-image: url('/assets/img/qianli.jpg');
+  background-size: 100% auto;
+  background-position: top center;
 }
 
 /* 内容区域半透明遮罩 */
