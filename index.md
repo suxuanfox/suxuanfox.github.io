@@ -26,8 +26,9 @@ body_class: home
 - [笔记](./notes)
 - [杂项](./others)
 
+---
+
 <br>
-<hr>
 
 ### 花粉游弋（平面布朗运动）
 
