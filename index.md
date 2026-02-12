@@ -56,7 +56,7 @@ body_class: home
     "></canvas>
 </div>
 <p style="text-align: center; color: #888888; font-size: 0.8rem; margin-top: 5px; font-family: monospace;">
-    t: <span id="bm-progress">0.0</span>s / 10.0s
+    游弋时间: <span id="bm-progress">0.0</span>s / 10.0s
 </p>
 
 <script>
@@ -160,7 +160,7 @@ body_class: home
             if(progressText) progressText.innerText = "10.0";
             btn.disabled = false;
             btn.style.opacity = '1';
-            btn.innerText = "生成路径 (10s)";
+            btn.innerText = "游弋";
         }
     }
 
@@ -181,7 +181,7 @@ body_class: home
         // 按钮交互反馈
         btn.disabled = true;
         btn.style.opacity = '0.7';
-        btn.innerText = "生成中...";
+        btn.innerText = "游弋";
 
         animationId = requestAnimationFrame(animate);
     }
