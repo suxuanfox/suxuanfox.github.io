@@ -29,6 +29,27 @@ button {
     sans-serif;
 }
 
+/* 页面背景 */
+body.home {
+  background-image: url('/assets/img/lantingxu.jpg');
+}
+
+body.notes {
+  background-image: url('/assets/img/qianli.jpg');
+}
+
+body.others {
+  background-image: url('/assets/img/qianli.jpg');
+}
+
+/* 内容区域半透明遮罩 */
+.wrapper {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 720px;
+  margin: auto;
+}
 
 /* 标题 */
 h1, h2, h3, h4 {
