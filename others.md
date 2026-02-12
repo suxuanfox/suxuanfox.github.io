@@ -1,10 +1,11 @@
 ---
 layout: page
+title: 杂项
 permalink: /others/
 toc: true
 ---
 {:toc}
-### 杂项
+
 #### LaTeX模板
 由于苏绚习惯使用VS Code编辑、编译.tex文档，所以LaTeX模板一般适用于VS Code及相关配置，对于其它平台的适用性不得而知。
 <br>
