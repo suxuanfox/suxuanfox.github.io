@@ -2,14 +2,21 @@
 layout: page
 title: Notes
 permalink: /notes/
+toc: true
 ---
+
+## Table of Contents
+{:toc}
 
 # Notes
 
-This page collects my study notes.
-
 ## Probability
-- Coming soon
+
+### Brownian Motion
+Content…
 
 ## PDE
-- Coming soon
+
+### Burgers Equation
+Content…
+
