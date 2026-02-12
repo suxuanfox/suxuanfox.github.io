@@ -3,6 +3,7 @@ layout: page
 title: 笔记
 permalink: /notes/
 toc: true
+body_class: page
 ---
 {:toc}
 
