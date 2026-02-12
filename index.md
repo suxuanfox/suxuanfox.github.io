@@ -1,6 +1,6 @@
 ---
 layout: home
-title: 主页
+title: 素以为绚兮
 body_class: home
 ---
 
