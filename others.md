@@ -11,7 +11,7 @@ body_class: page
 
 ---
 {:toc}
-
+<br>
 #### LaTeX模板
 由于苏绚习惯使用VS Code编辑、编译.tex文档，所以这里的LaTeX模板一般适用于VS Code及相关配置，对于其它平台的适用性不得而知。
 这是苏绚常用的VS Code中LaTeX相关[配置](https://github.com/suxuanfox/suxuanfox.github.io/blob/main/files/tex_setting.json)，冗余或不足之处敬请谅解。
