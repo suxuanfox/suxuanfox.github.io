@@ -34,24 +34,24 @@ button {
    首页 vs 其他页面
 ---------------------------- */
 body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  width: 100%;
-  z-index: -1;
-  background-repeat: no-repeat;
-  background-size: 100% auto;   /* 横向铺满 */
-  background-position: top center;
+  content: ""!important;
+  position: fixed!important;
+  top: 0; left: 0; right: 0!important;
+  width: 100%!important;
+  z-index: -1!important;
+  background-repeat: no-repeat!important;
+  background-size: 100% auto!important;   /* 横向铺满 */
+  background-position: top center!important;
 }
 
 /* 首页专属背景 */
 body.home::before {
-  background-image: url('{{ "/assets/img/lantingxu.jpg" | relative_url }}');
+  background-image: url('{{ "/assets/img/lantingxu.jpg" | relative_url }}')!important;
 }
 
 /* 其他页面统一背景 */
 body:not(.home)::before {
-  background-image: url('{{ "/assets/img/qianli.jpg" | relative_url }}');
+  background-image: url('{{ "/assets/img/qianli.jpg" | relative_url }}')!important;
 }
 
 /* ---------------------------
