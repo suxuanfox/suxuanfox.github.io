@@ -3,7 +3,9 @@
 
 @import "minima";
 
-/* 全局字体与颜色 */
+/* ---------------------------
+   全局字体与颜色
+---------------------------- */
 body {
   font-family:
     "Source Han Serif SC",
@@ -11,9 +13,8 @@ body {
     "Source Han Serif",
     "Times New Roman",
     serif;
-
   color: #222;
-  position: relative; /* 伪元素定位 */
+  position: relative; /* 为伪元素定位 */
 }
 
 /* 无衬线元素使用思源黑体 */
@@ -29,13 +30,54 @@ button {
     sans-serif;
 }
 
-/* 标题 */
+/* ---------------------------
+   背景设置（固定滚动）
+---------------------------- */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1; /* 保证在内容下方 */
+  background-repeat: no-repeat;
+  background-size: 100% auto;      /* 横向铺满 */
+  background-position: top center; /* 靠上显示 */
+  background-attachment: fixed;    /* 固定滚动 */
+}
+
+/* 首页专属背景 */
+body.home::before {
+  background-image: url('{{ "/assets/img/lantingxu.jpg" | relative_url }}') !important;
+}
+
+/* 其他页面统一背景 */
+body:not(.home)::before {
+  background-image: url('{{ "/assets/img/qianli.jpg" | relative_url }}') !important;
+}
+
+/* ---------------------------
+   内容区域半透明遮罩
+---------------------------- */
+.wrapper {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 720px;
+  margin: auto;
+}
+
+/* ---------------------------
+   标题
+---------------------------- */
 h1, h2, h3, h4 {
   color: #111;
   font-weight: 500;
 }
 
-/* 链接颜色 */
+/* ---------------------------
+   链接颜色
+---------------------------- */
 a {
   color: #3b5cff;
   text-decoration: none;
@@ -46,7 +88,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 导航栏 */
+/* ---------------------------
+   导航栏
+---------------------------- */
 .site-header {
   border-bottom: 1px solid #e5e5e5;
 }
@@ -54,4 +98,16 @@ a:hover {
 .site-title {
   color: #111 !important;
   font-weight: 600;
+}
+
+/* ---------------------------
+   TOC 样式
+---------------------------- */
+nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav ul li {
+  margin: 4px 0;
 }
