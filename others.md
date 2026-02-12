@@ -1,8 +1,11 @@
 ---
 layout: page
-title: 杂项
 permalink: /others/
+toc: true
 ---
+{:toc}
+### 杂项
+#### LaTeX模板
 由于苏绚习惯使用VS Code编辑、编译.tex文档，所以LaTeX模板一般适用于VS Code及相关配置，对于其它平台的适用性不得而知。
 <br>
 - [papertex](https://github.com/suxuanfox/papertex)是基于[清华大学毕业论文模板](https://github.com/tuna/thuthesis)根据主观需求做极少量修改得到的一份适用于日常作业等方面的LaTeX论文模板。
