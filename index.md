@@ -1,21 +1,21 @@
 ---
 layout: home
-title: Home
+title: 主页
 ---
 
-# Su Xuan
+# 苏绚
 
-Welcome to my personal homepage.
+我主要对
 
-I am interested in:
+- 概率论和随机分析
+- （泛函）分析和（偏微分）方程
+- （微分和代数）几何
 
-- Stochastic analysis
-- PDEs
-- Probability theory
+等方面感兴趣。
 
 ---
 
 ## Navigation
 
-- [Notes](./notes)
-- [Others](./others)
+- {笔记](./notes)
+- [杂项](./others)
