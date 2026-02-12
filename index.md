@@ -3,8 +3,6 @@ layout: home
 title: 主页
 ---
 
-# 苏绚
-
 我主要对
 
 - 概率论和随机分析
@@ -15,7 +13,7 @@ title: 主页
 
 ---
 
-## Navigation
+## 概览
 
-- {笔记](./notes)
+- [笔记](./notes)
 - [杂项](./others)
