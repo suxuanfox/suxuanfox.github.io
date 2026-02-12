@@ -5,7 +5,17 @@ body_class: home
 ---
 
 ---
-![兰亭集序](/assets/img/lantingxu.jpg)
+<figure style="text-align: center; margin: 20px 0;">
+    <img src="/assets/img/lantingxu.jpg" alt="兰亭集序" style="max-width: 100%; height: auto; border-radius: 2px;">
+    <figcaption style="
+        font-family: 'KaiTi', 'STKaiti', '楷体', serif; 
+        font-size: 0.85rem; 
+        color: #555; 
+        margin-top: 8px;
+    ">
+        王羲之行书兰亭序卷（传唐褚遂良摹本）
+    </figcaption>
+</figure>
 
 ---
 <br>
