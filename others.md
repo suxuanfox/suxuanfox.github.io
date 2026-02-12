@@ -3,6 +3,7 @@ layout: page
 title: 杂项
 permalink: /others/
 toc: true
+body_class: page
 ---
 {:toc}
 
