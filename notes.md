@@ -14,7 +14,7 @@ body_class: page
         color: #555; 
         margin-top: 8px;
     ">
-        《千里江山图》卷 【北宋】王希孟作
+        《千里江山图》卷 [北宋] 王希孟作
     </figcaption>
 </figure>
 
