@@ -33,32 +33,6 @@ button {
 }
 
 /* ---------------------------
-   背景设置（固定滚动）
----------------------------- */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; 
-  width: 100%;
-  height: 100vh; /* 2. 修复高度问题：占满屏幕高度 */
-  z-index: -1; 
-  background-repeat: no-repeat;
-  background-size: cover;          /* 3. 建议：用 cover 效果通常比 100% auto 更好，避免留白 */
-  background-position: top center; 
-}
-
-/* 首页专属背景 */
-body.home::before {
-  /* 确保这个文件是 .scss 且带有 Front Matter，或者直接写死路径如 url('/assets/img/lantingxu.jpg') */
-  background-image: url('{{ "/assets/img/lantingxu.jpg" | relative_url }}') !important;
-}
-
-/* 其他页面统一背景 */
-body:not(.home)::before {
-  background-image: url('{{ "/assets/img/qianli.jpg" | relative_url }}') !important;
-}
-
-/* ---------------------------
    标题
 ---------------------------- */
 h1, h2, h3, h4 {
