@@ -29,94 +29,172 @@ body_class: home
 <br>
 <hr>
 
-### 随机游走 / 布朗运动演示
+### 花粉游弋（平面布朗运动）
 
 <div style="text-align: center; margin: 20px 0;">
     <button id="bm-generate-btn" style="
         padding: 8px 16px;
-        background-color: #2c3e50;
-        color: white;
-        border: none;
-        border-radius: 4px;
+        background-color: #333333;
+        color: #ffffff;
+        border: 1px solid #000000;
+        border-radius: 2px;
         cursor: pointer;
         font-family: inherit;
         font-size: 0.9rem;
-        transition: opacity 0.2s;
+        transition: all 0.3s ease;
     ">
-        生成路径 $W_t$
+        游弋
     </button>
 </div>
 
-<div style="display: flex; justify-content: center;">
+<div style="display: flex; justify-content: center; position: relative;">
     <canvas id="bm-canvas" width="640" height="360" style="
-        border: 1px solid #e1e4e8;
-        background-color: #fafafa;
+        border: 1px solid #cccccc;
+        background-color: #ffffff;
         max-width: 100%;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     "></canvas>
 </div>
+<p style="text-align: center; color: #888888; font-size: 0.8rem; margin-top: 5px; font-family: monospace;">
+    t: <span id="bm-progress">0.0</span>s / 10.0s
+</p>
 
 <script>
 (function() {
     const canvas = document.getElementById('bm-canvas');
+    if (!canvas) return; // 防止未加载时报错
+    
     const ctx = canvas.getContext('2d');
     const btn = document.getElementById('bm-generate-btn');
+    const progressText = document.getElementById('bm-progress');
 
-    // 参数配置
-    const STEPS = 2000;    // 步数
-    const STEP_SIZE = 4;   // 步长尺度
+    // === 配置参数 ===
+    const TOTAL_STEPS = 6000;    // 总步数
+    const DURATION = 10000;      // 动画时长：10000毫秒
+    const STEP_SIZE = 3;         // 步长
 
-    function drawBrownianPath() {
-        const width = canvas.width;
-        const height = canvas.height;
+    // 状态变量
+    let animationId = null;
+    let currentX, currentY;
+    let startTime = 0;
+
+    // 1. 初始化背景（绘制浅灰色网格）
+    function initCanvas() {
+        const w = canvas.width;
+        const h = canvas.height;
         
-        // 清除画布
-        ctx.clearRect(0, 0, width, height);
+        // 清除并填充白色背景
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, w, h);
         
-        // 绘制网格背景（可选，为了更有数学感）
-        ctx.strokeStyle = '#f0f0f0';
+        // 绘制网格
         ctx.lineWidth = 1;
+        ctx.strokeStyle = '#f2f2f2'; // 极浅的灰色网格
         ctx.beginPath();
-        for(let i=0; i<width; i+=40) { ctx.moveTo(i,0); ctx.lineTo(i,height); }
-        for(let i=0; i<height; i+=40) { ctx.moveTo(0,i); ctx.lineTo(width,i); }
-        ctx.stroke();
-
-        // 开始绘制路径
-        ctx.beginPath();
-        ctx.strokeStyle = '#0366d6'; // GitHub Blue
-        ctx.lineWidth = 1.2;
-        
-        // 起点设为中心
-        let x = width / 2;
-        let y = height / 2;
-        ctx.moveTo(x, y);
-
-        // 模拟二维布朗运动 (Wiener Process近似)
-        // 这里的增量服从均匀分布，根据中心极限定理，步数多了近似正态
-        for (let i = 0; i < STEPS; i++) {
-            // 简单的随机游走
-            x += (Math.random() - 0.5) * STEP_SIZE * 2;
-            y += (Math.random() - 0.5) * STEP_SIZE * 2;
-            
-            ctx.lineTo(x, y);
+        // 竖线
+        for(let i=0; i<=w; i+=40) { 
+            ctx.moveTo(i, 0); 
+            ctx.lineTo(i, h); 
+        }
+        // 横线
+        for(let i=0; i<=h; i+=40) { 
+            ctx.moveTo(0, i); 
+            ctx.lineTo(w, i); 
         }
         ctx.stroke();
-
-        // 标记终点
-        ctx.beginPath();
-        ctx.arc(x, y, 3, 0, 2 * Math.PI);
-        ctx.fillStyle = '#d73a49'; // Red
-        ctx.fill();
     }
 
-    // 绑定事件
-    if(btn && canvas) {
-        btn.addEventListener('click', drawBrownianPath);
-        // 还有一种更加现代的写法：btn.onclick = drawBrownianPath;
+    // 2. 动画核心逻辑
+    function animate(currentTime) {
+        if (!startTime) startTime = currentTime;
+        const elapsed = currentTime - startTime;
         
-        // 鼠标悬停效果
-        btn.onmouseover = function() { this.style.opacity = 0.8; };
-        btn.onmouseout = function() { this.style.opacity = 1; };
+        // 计算进度 (0.0 到 1.0)
+        let progress = Math.min(elapsed / DURATION, 1.0); 
+        
+        // 更新时间显示 (保留1位小数)
+        if(progressText) {
+            progressText.innerText = (elapsed / 1000).toFixed(1);
+        }
+
+        // 当前应该画到的步数
+        const targetSteps = Math.floor(progress * TOTAL_STEPS);
+        
+        // 设置路径样式：深灰色，强调素雅
+        ctx.lineWidth = 1.2;
+        ctx.strokeStyle = '#222222'; // 深灰色路径，接近黑
+        ctx.beginPath();
+        ctx.moveTo(currentX, currentY);
+
+        // 补齐自上一帧以来的步数
+        // 这里的逻辑稍微调整：我们记录上一次画到的 stepsDrawn
+        // 但为了简单，我们每帧都接续上一次的坐标画
+        
+        // 每一帧画一定数量的步子来追赶进度
+        // 为了保持连贯性，这里使用一个临时循环
+        let stepsToDrawNow = targetSteps - stepsDrawn;
+        
+        for (let i = 0; i < stepsToDrawNow; i++) {
+            const dx = (Math.random() - 0.5) * STEP_SIZE * 2;
+            const dy = (Math.random() - 0.5) * STEP_SIZE * 2;
+            
+            currentX += dx;
+            currentY += dy;
+            
+            ctx.lineTo(currentX, currentY);
+        }
+        ctx.stroke();
+        
+        // 更新全局计数器
+        stepsDrawn = targetSteps;
+
+        // 检查是否结束
+        if (progress < 1.0) {
+            animationId = requestAnimationFrame(animate);
+        } else {
+            // 结束时画纯黑点
+            ctx.beginPath();
+            ctx.arc(currentX, currentY, 3, 0, 2 * Math.PI);
+            ctx.fillStyle = '#000000'; // 纯黑终点
+            ctx.fill();
+            if(progressText) progressText.innerText = "10.0";
+            btn.disabled = false;
+            btn.style.opacity = '1';
+            btn.innerText = "生成路径 (10s)";
+        }
+    }
+
+    // 全局变量用于记录已绘制步数
+    let stepsDrawn = 0;
+
+    function startAnimation() {
+        if (animationId) cancelAnimationFrame(animationId);
+        
+        initCanvas();
+        
+        // 重置状态
+        currentX = canvas.width / 2;
+        currentY = canvas.height / 2;
+        stepsDrawn = 0;
+        startTime = 0; // 重置开始时间，在第一帧时赋值
+        
+        // 按钮交互反馈
+        btn.disabled = true;
+        btn.style.opacity = '0.7';
+        btn.innerText = "生成中...";
+
+        animationId = requestAnimationFrame(animate);
+    }
+
+    // 初始化
+    initCanvas();
+
+    // 绑定事件
+    if(btn) {
+        btn.onclick = startAnimation;
+        // 鼠标悬停变黑
+        btn.onmouseover = function() { if(!this.disabled) this.style.backgroundColor = '#000000'; };
+        btn.onmouseout = function() { if(!this.disabled) this.style.backgroundColor = '#333333'; };
     }
 })();
 </script>
