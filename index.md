@@ -13,7 +13,7 @@ body_class: home
         color: #555; 
         margin-top: 8px;
     ">
-        王羲之行书兰亭序卷（传唐褚遂良摹本）
+        《兰亭序》卷 【东晋】王羲之书（传唐褚遂良摹本）
     </figcaption>
 </figure>
 
