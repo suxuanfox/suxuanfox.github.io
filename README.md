@@ -1,2 +1,2 @@
-# <font face='lisu'>苏绚</font>
+# <font face='kaiti'>苏绚</font>
 这个网站主要用于承载一些学习笔记和其它杂项，之后可能会逐步完善。
