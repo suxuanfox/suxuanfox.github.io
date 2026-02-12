@@ -7,6 +7,7 @@ body_class: home
 ---
 ![兰亭集序](/assets/img/lantingxu.jpg)
 ---
+<br>
 我主要对
 
 - 概率论和随机分析
