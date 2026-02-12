@@ -3,7 +3,7 @@ layout: home
 title: 主页
 body_class: home
 ---
-
+![兰亭集序](/assets/img/lantingxu.jpg)
 我主要对
 
 - 概率论和随机分析
@@ -11,7 +11,7 @@ body_class: home
 - （微分和代数）几何
 
 等方面感兴趣。
-![测试图片](/assets/img/lantingxu.jpg)
+
 
 ---
 <br>
