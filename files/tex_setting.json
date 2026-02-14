@@ -107,7 +107,9 @@
     "*.log",
     "*.fdb_latexmk",
     "*.synctex.gz",
-    "*.synctex"
+    "*.synctex",
+    "*.nav",
+    "*.snm"
 ],
 "latex-workshop.latex.autoClean.run": "onBuilt",
 //"latex-workshop.latex.autoBuild.interval": 30000,
