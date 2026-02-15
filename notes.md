@@ -23,7 +23,7 @@ body_class: page
 
 <br>
 #### 随机分析
-- 该笔记[随机分析中的几种导数(PDF)](/files/derivative.pdf)整理汇总了随机分析中常用的几种“导数”
+- 该笔记[随机分析中的几种导数(PDF)](/files/derivative.pdf)整理汇总了随机分析中常用的几种“导数”，源码在[这里](https://github.com/suxuanfox/papertex)，使用的模板为[中国科学技术大学毕业论文模板](https://github.com/ustctug/ustcthesis)并基于其做极少量修改。
 
 
 
