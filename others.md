@@ -25,7 +25,8 @@ body_class: page
 #### LaTeX模板
 以下为常用的各LaTeX模板，由于苏绚习惯使用VS Code编辑、编译.tex文档，所以这里的LaTeX模板一般适用于VS Code及相关配置，对于其它平台的适用性不得而知。
 
-常用中文字体包括Windows自带的宋体、仿宋、楷体和思源系列的黑体、宋体等；开源英文字体使用Source Sans 3、Source Serif 4和Cascadia系列。Source系列可在[adoebe-fonts](https://github.com/adobe-fonts)下载，Cascadia系列可在
+常用中文字体包括Windows自带的宋体、仿宋、楷体、思源黑体（Source Han Sans SC）和思源宋体（Source Han Serif SC）等；开源英文字体使用Source Sans 3、Source Serif 4和Cascadia系列。Source系列可在[adoebe-fonts](https://github.com/adobe-fonts)下载，Cascadia系列可在[cascadia-code](https://github.com/microsoft/cascadia-code)下载。
+
 这是苏绚常用的VS Code中LaTeX相关[配置](https://github.com/suxuanfox/suxuanfox.github.io/blob/main/files/tex_setting.json)，冗余或不足之处敬请谅解。
 <br>
 - [papertex](https://github.com/suxuanfox/papertex)用于日常作业等用，仅在[中国科学技术大学学业论文LaTeX模板](https://github.com/ustctug/ustcthesis)的基础上做极少量修改，增加了从参考文献返回对应正文的跳转功能。
