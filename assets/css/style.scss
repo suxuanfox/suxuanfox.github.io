@@ -67,7 +67,15 @@ a:hover {
 .site-title {
   color: #111 !important;
   font-weight: 700;
-  font-size: 30px;
+  /* 1. 调大字号：从 30px 改为 36px 或更大 */
+  font-size: 36px; 
+}
+
+/* 2. 让导航链接（笔记、杂项等）加粗 */
+.site-nav .page-link {
+  font-weight: 600;  /* 或者使用 bold */
+  font-size: 18px;   /* 如果觉得按钮字太小，也可以顺便调大一点 */
+  margin-left: 20px; /* 增加按钮之间的间距 */
 }
 
 /* ---------------------------
