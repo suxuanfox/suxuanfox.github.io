@@ -4,6 +4,7 @@ title: 日记
 permalink: /diary/
 toc: true
 body_class: page
+description: 你未看此花时此花与汝心同归于寂你来看此花时则此花颜色一时明白起来便知此花不在你的心外
 ---
 
 ---
