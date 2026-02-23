@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="footer-left">
+    <p class="footer-name">苏绚（Su Xuan）</p>
+
+    {% if page.description %}
+      <p class="footer-description">{{ page.description }}</p>
+    {% elsif site.description %}
+      <p class="footer-description">{{ site.description }}</p>
+    {% endif %}
+
+  </div>
+</footer>
