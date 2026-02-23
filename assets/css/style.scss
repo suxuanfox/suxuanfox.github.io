@@ -10,25 +10,29 @@
 
 body {
   font-family:
+    "Source Serif 4",         /* 新增：西文衬线 */
     "Source Han Serif SC",
     "Noto Serif CJK SC",
     "Source Han Serif",
+    "SimSun",                 /* 备选：Win宋体 */
     "Times New Roman",
     serif;
   color: #222;
-  position: relative; /* 为伪元素定位 */
+  position: relative; 
 }
 
-/* 无衬线元素使用思源黑体 */
+/* 无衬线元素使用黑体 */
 .site-header,
 .site-title,
 .site-nav,
 nav,
 button {
   font-family:
+    "Source Sans 3",          /* 新增：西文黑体 */
     "Source Han Sans SC",
     "Noto Sans CJK SC",
     "Source Han Sans",
+    "Microsoft YaHei",        /* 备选：Win黑体 */
     sans-serif;
 }
 
