@@ -105,6 +105,31 @@ nav ul li {
   line-height: 1.4;
 }
 
-body {
+main {
   padding-bottom: 80px;
+}
+
+/* -------------------------------
+   响应式处理：手机屏幕不固定
+---------------------------------*/
+@media (max-width: 480px) {
+  .site-footer {
+    position: relative;   /* 不固定，随内容滚动 */
+    left: 0;
+    bottom: 0;
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .footer-name {
+    font-size: 14px;
+  }
+
+  .footer-description {
+    font-size: 12px;
+  }
+
+  main {
+    padding-bottom: 0;    /* 手机屏幕不固定，不需额外留白 */
+  }
 }
