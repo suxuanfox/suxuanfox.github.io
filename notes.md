@@ -4,6 +4,7 @@ title: 笔记
 permalink: /notes/
 toc: true
 body_class: page
+description: 君子终日乾乾夕惕若厉无咎
 ---
 ---
 <figure style="text-align: center; margin: 20px 0;">
