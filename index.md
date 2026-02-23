@@ -35,6 +35,7 @@ body_class: home
 
 - [笔记](./notes)
 - [杂项](./others)
+- [日记](./diary)
 
 ---
 
