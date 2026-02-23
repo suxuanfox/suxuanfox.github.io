@@ -79,7 +79,7 @@ nav ul li {
 
 .site-footer {
   position: fixed;
-  left: 50%;
+  left: 20px;
   bottom: 20px;
   transform: translateX(-50%);
   max-width: 90%;
@@ -88,8 +88,7 @@ nav ul li {
   background: rgba(255,255,255,0.9); 
   padding: 8px 12px;
   border-radius: 6px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
-  text-align: center;
+  text-align: left;
 }
 
 .footer-name {
