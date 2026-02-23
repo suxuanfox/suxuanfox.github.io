@@ -7,6 +7,7 @@ markdown: kramdown
 header_pages:
   - notes.md
   - others.md
+  - diary.md
 
 kramdown:
   math_engine: mathjax
