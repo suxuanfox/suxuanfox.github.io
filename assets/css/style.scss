@@ -76,3 +76,20 @@ nav ul {
 nav ul li {
   margin: 4px 0;
 }
+
+.site-footer {
+  position: fixed;
+  left: 40px;
+  bottom: 30px;
+}
+
+.footer-name {
+  margin: 0;
+  font-size: 16px;
+}
+
+.footer-description {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: #666;
+}
