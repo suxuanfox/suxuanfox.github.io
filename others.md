@@ -4,6 +4,7 @@ title: 杂项
 permalink: /others/
 toc: true
 body_class: page
+description: 君子终日乾乾夕惕若厉无咎
 ---
 
 ---
