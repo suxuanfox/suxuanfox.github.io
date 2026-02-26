@@ -3,7 +3,31 @@
 
 @import "minima";
 
+/* ---------------------------
+   链接样式
+---------------------------- */
+a {
+  color: #3b5cff;
+  text-decoration: none;
 
+  /* 指定使用 Cascadia Code Italic */
+  /* 当遇到中文时，它会自动回退到后面的衬线字体 */
+  font-family: 
+    "Cascadia Code Italic", 
+    "Source Serif 4", 
+    "Source Han Serif SC", 
+    serif;
+
+  /* 核心步骤：开启 Cursive 特性 */
+  font-style: italic;               /* 必须设置为 italic 才能触发该字体的斜体变体 */
+  font-feature-settings: "ss01" 1;  /* 开启 Stylistic Set 01 (Cursive 效果) */
+  -webkit-font-feature-settings: "ss01" 1; /* 兼容性写法 */
+}
+
+a:hover {
+  color: #6a3cff;
+  text-decoration: underline;
+}
 
 /* ---------------------------
    全局字体与颜色
