@@ -4,6 +4,62 @@
 @import "minima";
 
 /* ---------------------------
+   引入 Cascadia Code 字体
+---------------------------- */
+@font-face {
+  font-family: "Cascadia Code";
+  src: url("/assets/fonts/CascadiaCode.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cascadia Code";
+  src: url("/assets/fonts/CascadiaCodeItalic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* ---------------------------
+   正文链接英文使用 Cascadia Cursive
+---------------------------- */
+main a {
+  font-family: 
+    "Cascadia Code",       /* 英文优先使用 Cascadia */
+    "Source Serif 4", 
+    "Source Han Serif SC", 
+    "Noto Serif CJK SC",
+    serif;
+
+  font-style: normal;      /* 默认使用正常字形 */
+  font-feature-settings: "ss01"; /* 开启 Cursive */
+
+  color: #3b5cff;
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------
+   斜体链接自动切换到 Italic 文件
+---------------------------- */
+main a em,
+main a i {
+  font-style: italic;      /* 会自动匹配 CascadiaCodeItalic */
+  font-feature-settings: "ss01"; /* 仍开启 cursive */
+}
+
+/* ---------------------------
+   可选：只让英文生效
+---------------------------- */
+/* 通过 lang=en 或 unicode-range 精细控制 */
+main a {
+  unicode-range: U+0000-007F; /* 仅拉丁字符使用 Cascadia */
+}
+
+/* ---------------------------
    全局字体与颜色
 ---------------------------- */
 
