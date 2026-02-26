@@ -3,12 +3,16 @@
 
 @import "minima";
 
+/* ---------------------------
+   字体引入：欺骗浏览器
+   把斜体文件当做“正常态”引入，这样就不需要设置 font-style: italic 了
+---------------------------- */
 @font-face {
-  font-family: 'CascadiaCursive';
-  /* 请务必确认路径正确。如果是 Jekyll，建议使用 /assets/fonts/... */
+  font-family: 'CascadiaCursiveOnly'; 
   src: url('/assets/fonts/CascadiaCodeItalic.woff2') format('woff2');
+  /* 关键：即使文件是斜体，也要写 normal */
   font-weight: normal;
-  font-style: italic; 
+  font-style: normal; 
   font-display: swap;
 }
 
@@ -19,19 +23,22 @@ a {
   color: #3b5cff;
   text-decoration: none;
 
-  /* 1. 应用自定义字体名 */
-  /* 2. 这里的顺序很重要，CascadiaCursive 放在最前 */
-  font-family: 'CascadiaCursive', "Source Serif 4", "Source Han Serif SC", serif;
+  /* 1. 优先使用我们伪装好的 CascadiaCursiveOnly */
+  /* 2. 后面接正常的中文衬线体 */
+  font-family: 
+    "CascadiaCursiveOnly", 
+    "Source Serif 4", 
+    "Source Han Serif SC", 
+    "Noto Serif CJK SC", 
+    serif;
 
-  /* 3. 强制触发斜体，这是开启 cursive 字形的先决条件 */
-  font-style: italic;
+  /* 3. 必须设为 normal，否则中文会跟着一起斜 */
+  font-style: normal !important;
 
-  /* 4. 开启 Stylistic Set 01 (Cascadia Code 专属的 Cursive 效果开关) */
+  /* 4. 开启 Cascadia Code 的 Cursive 变体特性 (ss01) */
+  /* ss01: 激活手写体字形；calt: 激活连字 */
   font-feature-settings: "ss01" on, "calt" on;
   -webkit-font-feature-settings: "ss01" on, "calt" on;
-  
-  /* 可选：如果觉得 cursive 字体太小，可以微调 */
-  // font-size: 1.05em; 
 }
 
 a:hover {
