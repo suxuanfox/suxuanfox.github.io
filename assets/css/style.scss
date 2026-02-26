@@ -3,47 +3,29 @@
 
 @import "minima";
 
-/* ---------------------------
-   字体引入：欺骗浏览器
-   把斜体文件当做“正常态”引入，这样就不需要设置 font-style: italic 了
----------------------------- */
+/* --- 1. 定义字体 --- */
 @font-face {
-  font-family: 'CascadiaCursiveOnly'; 
+  font-family: 'CascadiaCursive';
   src: url('/assets/fonts/CascadiaCodeItalic.woff2') format('woff2');
-  /* 关键：即使文件是斜体，也要写 normal */
   font-weight: normal;
-  font-style: normal; 
+  font-style: normal; /* 关键：让浏览器认为这是正常体，防止中文被掰斜 */
   font-display: swap;
 }
 
-/* ---------------------------
-   链接颜色与字体
----------------------------- */
-a {
-  color: #3b5cff;
-  text-decoration: none;
-
-  /* 1. 优先使用我们伪装好的 CascadiaCursiveOnly */
-  /* 2. 后面接正常的中文衬线体 */
+/* --- 2. 定义通用类 --- */
+.cursive {
   font-family: 
-    "CascadiaCursiveOnly", 
+    "CascadiaCursive", 
     "Source Serif 4", 
     "Source Han Serif SC", 
-    "Noto Serif CJK SC", 
     serif;
-
-  /* 3. 必须设为 normal，否则中文会跟着一起斜 */
-  font-style: normal !important;
-
-  /* 4. 开启 Cascadia Code 的 Cursive 变体特性 (ss01) */
-  /* ss01: 激活手写体字形；calt: 激活连字 */
+  
+  /* 开启 Cascadia Code 的 Cursive 变体特性 (ss01) */
   font-feature-settings: "ss01" on, "calt" on;
   -webkit-font-feature-settings: "ss01" on, "calt" on;
-}
 
-a:hover {
-  color: #6a3cff;
-  text-decoration: underline;
+  /* 强制不显示系统斜体，保护中文 */
+  font-style: normal !important;
 }
 
 /* ---------------------------
