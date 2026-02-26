@@ -27,7 +27,7 @@ description: 君子终日乾乾夕惕若厉无咎
 
 由于苏绚习惯使用VS Code编辑、编译.tex文档，所以这里的LaTeX模板适用于VS Code及相关配置，对于其它平台的适用性不得而知。
 
-常用中文字体包括Windows自带的（即中易系列）宋体、仿宋、楷体、思源黑体（Source Han Sans SC）和思源宋体（Source Han Serif SC）等；开源英文字体使用Source Sans 3、Source Serif 4、Fira Math和Cascadia系列。Source系列主要用于正文和标题等，可在[adobe-fonts](https://github.com/adobe-fonts){:.cursive}下载，Cascadia系列中的Cascadia Code Italic可以手动选择开启草书（curscive），可在<a href="https://github.com/microsoft/cascadia-code" class="cursive">cascadia-code</a>下载，Fira Math是无衬线公式字体，可在[firamath](https://github.com/firamath/firamath){:.cursive}下载。如果可变字体无法正常编译使用，可根据需求下载单个静态字体并尽量选择“为所有用户安装”。
+常用中文字体包括Windows自带的（即中易系列）宋体、仿宋、楷体、思源黑体（Source Han Sans SC）和思源宋体（Source Han Serif SC）等；开源英文字体使用Source Sans 3、Source Serif 4、Fira Math和Cascadia系列。Source系列主要用于正文和标题等，可在[adobe-fonts](https://github.com/adobe-fonts){:.cursive}下载；Cascadia系列主要用于代码环境和html中，其中的Cascadia Code Italic可以手动选择开启草书（curscive），效果为其后的超链接字体显示，可在<a href="https://github.com/microsoft/cascadia-code" class="cursive">cascadia-code</a>下载；Fira Math是无衬线公式字体，可在[firamath](https://github.com/firamath/firamath){:.cursive}下载。如果可变字体无法正常编译使用，可根据需求下载单个静态字体并尽量选择“为所有用户安装”。
 
 这是苏绚常用的VS Code中LaTeX相关[配置](https://github.com/suxuanfox/suxuanfox.github.io/blob/main/files/tex_setting.json)，冗余或不足之处敬请谅解。
 
