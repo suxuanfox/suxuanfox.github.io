@@ -3,25 +3,35 @@
 
 @import "minima";
 
+@font-face {
+  font-family: 'CascadiaCursive';
+  /* 请务必确认路径正确。如果是 Jekyll，建议使用 /assets/fonts/... */
+  src: url('/assets/fonts/CascadiaCodeItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic; 
+  font-display: swap;
+}
+
 /* ---------------------------
-   链接样式
+   链接颜色与字体
 ---------------------------- */
 a {
   color: #3b5cff;
   text-decoration: none;
 
-  /* 指定使用 Cascadia Code Italic */
-  /* 当遇到中文时，它会自动回退到后面的衬线字体 */
-  font-family: 
-    "Cascadia Code Italic", 
-    "Source Serif 4", 
-    "Source Han Serif SC", 
-    serif;
+  /* 1. 应用自定义字体名 */
+  /* 2. 这里的顺序很重要，CascadiaCursive 放在最前 */
+  font-family: 'CascadiaCursive', "Source Serif 4", "Source Han Serif SC", serif;
 
-  /* 核心步骤：开启 Cursive 特性 */
-  font-style: italic;               /* 必须设置为 italic 才能触发该字体的斜体变体 */
-  font-feature-settings: "ss01" 1;  /* 开启 Stylistic Set 01 (Cursive 效果) */
-  -webkit-font-feature-settings: "ss01" 1; /* 兼容性写法 */
+  /* 3. 强制触发斜体，这是开启 cursive 字形的先决条件 */
+  font-style: italic;
+
+  /* 4. 开启 Stylistic Set 01 (Cascadia Code 专属的 Cursive 效果开关) */
+  font-feature-settings: "ss01" on, "calt" on;
+  -webkit-font-feature-settings: "ss01" on, "calt" on;
+  
+  /* 可选：如果觉得 cursive 字体太小，可以微调 */
+  // font-size: 1.05em; 
 }
 
 a:hover {
