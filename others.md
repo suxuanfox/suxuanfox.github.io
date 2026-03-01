@@ -34,3 +34,7 @@ description: 君子终日乾乾夕惕若厉无咎
 - [papertex](https://github.com/suxuanfox/papertex)用于日常作业等，仅在[中国科学技术大学学业论文LaTeX模板](https://github.com/ustctug/ustcthesis)的基础上做极少量修改，增加了从参考文献返回对应正文的跳转功能。
 - [notetex](https://github.com/suxuanfox/notetex)是基于李文威老师的《代数学方法：卷二》的[源代码](https://github.com/wenweili/AlJabr-2)根据主观需求做少量修改得到的一份适用于课程笔记等方面的LaTeX书籍模板，主要修改了字体配置。[笔记模板测试](https://github.com/suxuanfox/notetex/blob/main/main.pdf)为一个简单的测试用的示例样稿。
 - [prebeamer](https://github.com/suxuanfox/prebeamer)是参照李文威老师的著作[《代数学方法：卷二》](https://github.com/wenweili/AlJabr-2)及其源代码制作的中文Beamer模板，用于日常的交流展示等。[演示文稿测试](/files/main.pdf)为一个简单的示例。
+<br>
+#### PC使用技巧
+
+[PC使用技巧](/files/smalltech.md)汇总了一些PC使用中用到的一些小功能便于查询。
