@@ -12,18 +12,18 @@ description: 君子终日乾乾夕惕若厉无咎
 2. 打开C:\Windows\System32\drivers\etc\hosts；
 
 3. 在最下方添加
-<pre>
-  <code>
+```
     127.0.0.1 example.com
-127.0.0.1 www.example.com
-  </code>
-</pre>
+    127.0.0.1 www.example.com
+```
+{: .code-block }
+
 并保存；
 
 4. 打开cmd运行
-<pre>
-  <code>
-    ipconfig /flushdns
-  </code>
-</pre>
+```python
+ipconfig /flushdns
+```
+{: .code-block }
+
 即可。
