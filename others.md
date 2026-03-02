@@ -37,4 +37,4 @@ description: 君子终日乾乾夕惕若厉无咎
 
 #### PC使用技巧
 
-[PC使用技巧](/files/smalltech.html)汇总了一些PC使用中用到的一些小功能便于查询。
+[PC使用技巧](/files/smalltech.md)汇总了一些PC使用中用到的一些小功能便于查询。
