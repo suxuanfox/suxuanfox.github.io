@@ -1,3 +1,10 @@
+---
+layout: page
+body_class: page
+description: 君子终日乾乾夕惕若厉无咎
+---
+
+
 - 禁止访问特定网站
 
 1. 管理员身份运行记事本；
