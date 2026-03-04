@@ -37,4 +37,4 @@ description: 君子终日乾乾夕惕若厉无咎
 
 #### 个人主页
 
-该主页基于Github Pages搭建，使用了“minimal”模板并根据个人需求和审美做了修改，具体可参见官方文档和[苏绚的个人网页的配置文件](https://github.com/suxuanfox/suxuanfox.github.io)。
+该主页基于Github Pages搭建，使用了“minimal”模板并根据个人需求和审美做了增删修改，具体可参见官方文档和[苏绚的个人网页的配置文件](https://github.com/suxuanfox/suxuanfox.github.io)。
