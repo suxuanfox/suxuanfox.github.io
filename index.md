@@ -36,7 +36,7 @@ description: 知其白守其黑为天下式
 
 - [笔记](./notes)
 - [杂项](./others)
-- [日记](./tech)
+- [技巧](./tech)
 
 ---
 
