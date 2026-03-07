@@ -175,3 +175,175 @@ main {
   }
 }
 
+/* =====================================
+   Mathematical Environments
+   ===================================== */
+
+/* ---------- 计数器 ---------- */
+
+body {
+  counter-reset:
+    theorem
+    lemma
+    proposition
+    definition
+    example
+    remark
+    exercise;
+}
+
+/* ---------- 通用盒子 ---------- */
+
+.mathbox {
+  padding: 14px 18px;
+  margin: 24px 0;
+  border-radius: 6px;
+  line-height: 1.6;
+}
+
+/* 标题 */
+
+.mathbox .title {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* =====================================
+   THEOREM STYLE
+   ===================================== */
+
+.theorem,
+.lemma,
+.proposition {
+
+  background: #f6f8ff;
+  border-left: 5px solid #4a6cf7;
+}
+
+/* theorem */
+
+.theorem {
+  counter-increment: theorem;
+}
+
+.theorem .title::before {
+  content: "Theorem " counter(theorem) ". ";
+}
+
+/* lemma */
+
+.lemma {
+  counter-increment: lemma;
+}
+
+.lemma .title::before {
+  content: "Lemma " counter(lemma) ". ";
+}
+
+/* proposition */
+
+.proposition {
+  counter-increment: proposition;
+}
+
+.proposition .title::before {
+  content: "Proposition " counter(proposition) ". ";
+}
+
+/* =====================================
+   DEFINITION STYLE
+   ===================================== */
+
+.definition {
+
+  background: #f5f5f5;
+  border-left: 5px solid #888;
+}
+
+.definition {
+  counter-increment: definition;
+}
+
+.definition .title::before {
+  content: "Definition " counter(definition) ". ";
+}
+
+/* =====================================
+   EXAMPLE STYLE
+   ===================================== */
+
+.example {
+
+  background: #fff8f0;
+  border-left: 5px solid #e69500;
+}
+
+.example {
+  counter-increment: example;
+}
+
+.example .title::before {
+  content: "Example " counter(example) ". ";
+}
+
+/* =====================================
+   REMARK STYLE
+   ===================================== */
+
+.remark {
+
+  background: #fffbea;
+  border-left: 5px solid #c9a000;
+}
+
+.remark {
+  counter-increment: remark;
+}
+
+.remark .title::before {
+  content: "Remark " counter(remark) ". ";
+}
+
+/* =====================================
+   EXERCISE STYLE
+   ===================================== */
+
+.exercise {
+
+  background: #f0faf5;
+  border-left: 5px solid #2e9f62;
+}
+
+.exercise {
+  counter-increment: exercise;
+}
+
+.exercise .title::before {
+  content: "Exercise " counter(exercise) ". ";
+}
+
+/* =====================================
+   PROOF STYLE
+   ===================================== */
+
+.proof {
+
+  margin: 20px 0;
+  padding-left: 12px;
+  border-left: 3px solid #aaa;
+}
+
+.proof .title::before {
+
+  content: "Proof. ";
+  font-weight: 600;
+}
+
+/* QED symbol */
+
+.proof::after {
+
+  content: "□";
+  float: right;
+  font-weight: bold;
+}
