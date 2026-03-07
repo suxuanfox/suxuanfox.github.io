@@ -21,10 +21,14 @@ description: 君子终日乾乾夕惕若厉无咎
 </figure>
 
 ---
+
 {:toc}
 # 多元微积分常用公式
-## 分部积分公式
+<iframe 
+  src="/files/mucal.pdf"
+  width="100%"
+  height="800px">
+</iframe>
 
-## 积分的极坐标表示
 # SDE/PDE常用定理
 
