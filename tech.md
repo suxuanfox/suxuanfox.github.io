@@ -7,7 +7,7 @@ body_class: page
 description: 君子终日乾乾夕惕若厉无咎
 ---
 
----
+
 <figure style="text-align: center; margin: 20px 0;">
     <img src="/assets/img/qianli.jpg" alt="千里江山图" style="max-width: 100%; height: auto; border-radius: 2px;">
     <figcaption style="
@@ -20,7 +20,7 @@ description: 君子终日乾乾夕惕若厉无咎
     </figcaption>
 </figure>
 
----
+
 
 {:toc}
 # 多元微积分常用公式
