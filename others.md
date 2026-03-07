@@ -44,6 +44,13 @@ description: 君子终日乾乾夕惕若厉无咎
 
 #### 英文草书
 
+苏绚对英文草书或连笔字（cursive）并无任何研究或见解，仅出于个人审美使用了一些连笔技巧。窃以为，就数理学科而言，书写明白是第一要素，此处“明白”是指自己和大多数其他人能够不费太大力气地接受、辨认。
+
+下面两张图分别为jpg和svg格式，矢量图由jpg转化而来，仅供参考
 <figure style="text-align: center; margin: 20px 0;">
     <img src="/assets/img/cursive.jpg" alt="cursive" style="max-width: 100%; height: auto; border-radius: 2px;">
+</figure>
+
+<figure style="text-align: center; margin: 20px 0;">
+    <img src="/assets/img/cursive.svg" alt="cursive" style="max-width: 100%; height: auto; border-radius: 2px;">
 </figure>
