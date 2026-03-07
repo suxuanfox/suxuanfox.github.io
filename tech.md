@@ -22,31 +22,33 @@ description: 君子终日乾乾夕惕若厉无咎
 
 ---
 
+<br>
 * TOC
 {:toc}
-# 多元微积分常用公式
+
+## 多元微积分常用公式
 
 前三部分内容取自Lawrence C. Evans的[Partial Differential Equations (2nd edition)](https://bookstore.ams.org/gsm-19-r/){:.cursive}的附录部分。
-## 不等式
+### 不等式
 <iframe 
   src="/files/ineq.pdf"
   width="100%"
   height="800px">
 </iframe>
 
-## 分部积分公式
+### 分部积分公式
 <iframe 
   src="/files/intbypart.pdf"
   width="100%"
   height="800px">
 </iframe>
 
-## 隐（反）函数定理
+### 隐（反）函数定理
 <iframe 
   src="/files/inversefuncthm.pdf"
   width="100%"
   height="800px">
 </iframe>
 
-# SDE/PDE常用定理
+## SDE/PDE常用定理
 
