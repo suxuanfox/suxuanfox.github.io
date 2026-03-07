@@ -21,8 +21,11 @@ description: 君子终日乾乾夕惕若厉无咎
 </figure>
 
 ---
+<br>
+* TOC
 {:toc}
 <br>
+
 #### LaTeX模板
 
 由于苏绚习惯使用VS Code编辑、编译.tex文档，所以这里的LaTeX模板适用于VS Code及相关[配置](https://github.com/suxuanfox/suxuanfox.github.io/blob/main/files/tex_setting.json)（该配置仅为个人使用，冗余或不足之处敬请谅解），对于其它平台的适用性不得而知。
@@ -38,3 +41,9 @@ description: 君子终日乾乾夕惕若厉无咎
 #### 个人主页
 
 该个人主页基于Github Pages搭建，调用了Jekyll的<span class="cursive">minimal</span>模板并根据苏绚的个人需求和主观审美做了增删修改，具体可参见[官方文档](https://docs.github.com/zh/pages)和[苏绚的个人网页——配置文件](https://github.com/suxuanfox/suxuanfox.github.io)，合理使用包括LLM在内的AI工具可以减少代码方面的学习成本提高效率。
+
+#### 英文草书
+
+<figure style="text-align: center; margin: 20px 0;">
+    <img src="/assets/img/cursive.jpg" alt="cursive" style="max-width: 100%; height: auto; border-radius: 2px;">
+</figure>
