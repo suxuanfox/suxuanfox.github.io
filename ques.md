@@ -31,5 +31,7 @@ description: 君子终日乾乾夕惕若厉无咎
 
 #### 2026.03.08
 
+如何控制$\tilde{\rho}$的二阶导数  
+
 归纳证明Krylov估计，Xie L J, Zhang X C. Ergodicity of stochastic differential equations with jumps and singular coefficients. Ann Inst
 Henri Poincar´e Probab Stat, 2020, 56: 175–229
