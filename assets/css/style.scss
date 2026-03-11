@@ -1,6 +1,9 @@
 ---
 ---
 
+$background-color: #fffaf0;
+$body-bg: $background-color;
+
 @import "minima";
 
 /* --- 1. 定义字体 --- */
@@ -126,7 +129,7 @@ nav ul li {
   word-break: break-word;
   
   /* 优化：增加半透明背景和圆角，使其在任何背景下都清晰可见 */
-  background: var(--background-color, #fff);
+  background: #fffaf0;
   padding: 10px 15px;         /* 稍微加大内边距 */
   border-radius: 6px;         /* 增加圆角防止生硬 */
   box-shadow: none;
