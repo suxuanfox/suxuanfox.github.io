@@ -29,6 +29,10 @@ description: 君子终日乾乾夕惕若厉无咎
 
 <br>
 
+#### 日常安排
+
+{% include study-cycle.html %}
+
 #### LaTeX模板
 
 由于苏绚习惯使用VS Code编辑、编译.tex文档，所以这里的LaTeX模板适用于VS Code及相关[配置](https://github.com/suxuanfox/suxuanfox.github.io/blob/main/files/tex_setting.json)（该配置仅为个人使用，冗余或不足之处敬请谅解），对于其它平台的适用性不得而知。
