@@ -1,0 +1,65 @@
+<div id="study-box">
+
+<div class="study-title">今日查补</div>
+
+<div id="today-course" class="study-course"></div>
+
+</div>
+
+<style>
+
+#study-box{
+width:240px;
+height:120px;
+border:1px solid #ddd;
+border-radius:10px;
+padding:12px;
+background:#ffffff;
+position:relative;
+box-shadow:0 2px 6px rgba(0,0,0,0.05);
+}
+
+.study-title{
+position:absolute;
+top:8px;
+left:12px;
+font-size:14px;
+color:#666;
+}
+
+.study-course{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100%;
+font-size:22px;
+font-weight:500;
+}
+
+</style>
+
+<script>
+
+function updateStudyCourse(){
+
+const courses=[
+"随机分析",
+"线性泛函",
+"微分流形"
+]
+
+const start=new Date("2026-03-11")
+
+const today=new Date()
+
+const diff=Math.floor((today-start)/(1000*60*60*24))
+
+const index=(diff%3+3)%3
+
+document.getElementById("today-course").innerText=courses[index]
+
+}
+
+updateStudyCourse()
+
+</script>
