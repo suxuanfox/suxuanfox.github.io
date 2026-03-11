@@ -4,25 +4,31 @@
 
 <div id="today-course" class="study-course"></div>
 
+<div id="cycle-count" class="cycle-count"></div>
+
 </div>
 
 <style>
 
 #study-box{
-width:240px;
-height:120px;
-border:1px solid #ddd;
-border-radius:10px;
-padding:12px;
+width:100%;
+max-width:800px;
+margin:20px auto;
+border:1px solid #e5e5e5;
+border-radius:12px;
+padding:24px;
 background:#ffffff;
 position:relative;
-box-shadow:0 2px 6px rgba(0,0,0,0.05);
+
+/* 阴影 */
+box-shadow:0 8px 24px rgba(0,0,0,0.08);
+
 }
 
 .study-title{
 position:absolute;
-top:8px;
-left:12px;
+top:12px;
+left:16px;
 font-size:14px;
 color:#666;
 }
@@ -31,9 +37,16 @@ color:#666;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100%;
-font-size:22px;
-font-weight:500;
+height:90px;
+font-size:28px;
+font-weight:600;
+}
+
+.cycle-count{
+text-align:center;
+font-size:14px;
+color:#888;
+margin-top:6px;
 }
 
 </style>
@@ -56,7 +69,12 @@ const diff=Math.floor((today-start)/(1000*60*60*24))
 
 const index=(diff%3+3)%3
 
+const cycles=Math.floor(diff/3)
+
 document.getElementById("today-course").innerText=courses[index]
+
+document.getElementById("cycle-count").innerText=
+"已持续 "+cycles+" 个周期"
 
 }
 
