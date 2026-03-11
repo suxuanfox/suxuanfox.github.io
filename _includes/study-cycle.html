@@ -4,6 +4,11 @@
 
 <div id="today-course" class="study-course"></div>
 
+<div id="side-info" class="side-info">
+<div id="yesterday"></div>
+<div id="tomorrow"></div>
+</div>
+
 <div id="cycle-count" class="cycle-count"></div>
 
 </div>
@@ -19,10 +24,7 @@ border-radius:12px;
 padding:24px;
 background:#ffffff;
 position:relative;
-
-/* 阴影 */
 box-shadow:0 8px 24px rgba(0,0,0,0.08);
-
 }
 
 .study-title{
@@ -40,6 +42,16 @@ align-items:center;
 height:90px;
 font-size:28px;
 font-weight:600;
+}
+
+.side-info{
+position:absolute;
+right:16px;
+bottom:36px;
+text-align:right;
+font-size:13px;
+color:#777;
+line-height:1.6;
 }
 
 .cycle-count{
@@ -71,7 +83,16 @@ const index=(diff%3+3)%3
 
 const cycles=Math.floor(diff/3)
 
+const yesterdayIndex=(index+2)%3
+const tomorrowIndex=(index+1)%3
+
 document.getElementById("today-course").innerText=courses[index]
+
+document.getElementById("yesterday").innerText=
+"昨日："+courses[yesterdayIndex]
+
+document.getElementById("tomorrow").innerText=
+"明日："+courses[tomorrowIndex]
 
 document.getElementById("cycle-count").innerText=
 "已持续 "+cycles+" 个周期"
