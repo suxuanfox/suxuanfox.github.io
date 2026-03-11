@@ -1,7 +1,7 @@
 ---
 ---
 
-$background-color: #fffaf0;
+$background-color: #ffffff;
 $body-bg: $background-color;
 
 @import "minima";
@@ -129,7 +129,7 @@ nav ul li {
   word-break: break-word;
   
   /* 优化：增加半透明背景和圆角，使其在任何背景下都清晰可见 */
-  background: #fffaf0;
+  background: ##ffffff;
   padding: 10px 15px;         /* 稍微加大内边距 */
   border-radius: 6px;         /* 增加圆角防止生硬 */
   box-shadow: none;
