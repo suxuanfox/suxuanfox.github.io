@@ -10,14 +10,13 @@
   <div class="bottom-info">
     <div id="yesterday"></div>
     <div id="tomorrow"></div>
-    <div id="cycle-count"></div>
   </div>
 
 </div>
 
 <style>
 #study-box{
-  width:75%;
+  width:80%;
   max-width:500px;
   margin:20px auto;
   border:none;
@@ -84,7 +83,6 @@ function updateStudyCourse(){
   document.getElementById("today-course").innerText = courses[index];
   document.getElementById("yesterday").innerText = "昨日：" + courses[yesterdayIndex];
   document.getElementById("tomorrow").innerText = "明日：" + courses[tomorrowIndex];
-  document.getElementById("cycle-count").innerText = "已持续 " + cycles + " 个周期";
 }
 
 updateStudyCourse();
