@@ -126,11 +126,11 @@ nav ul li {
   word-break: break-word;
   
   /* 优化：增加半透明背景和圆角，使其在任何背景下都清晰可见 */
-  background: rgba(255, 255, 255, 0.85); 
-  backdrop-filter: blur(4px); /* 可选：增加高斯模糊，更有高级感 */
+  background: var(--background-color, #fff);
   padding: 10px 15px;         /* 稍微加大内边距 */
   border-radius: 6px;         /* 增加圆角防止生硬 */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* 增加极细微的阴影，提升层次 */
+  box-shadow: none;
+  border: none;
   
   text-align: left;
   z-index: 999;               /* 确保它在最前面，不被其他内容遮挡 */
