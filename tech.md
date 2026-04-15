@@ -31,7 +31,7 @@ description: 君子终日乾乾夕惕若厉无咎
 
 
 
-### 磨光逼近
+## 磨光逼近
 
 该部分内容取自Lawrence C. Evans 和Ronald F. Gariepy的MEASURE THEORY AND FINE PROPERTIES  OF FUNCTIONS的4.1节相关。
 <iframe 
