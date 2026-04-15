@@ -29,9 +29,21 @@ description: 君子终日乾乾夕惕若厉无咎
 
 <br>
 
+
+
+### 磨光逼近
+
+该部分内容取自Lawrence C. Evans 和Ronald F. Gariepy的MEASURE THEORY AND FINE PROPERTIES  OF FUNCTIONS的4.1节相关。
+<iframe 
+  src="/files/mollifier.pdf"
+  width="100%"
+  height="800px">
+</iframe>
+
 ## 多元微积分常用公式
 
-前三部分内容取自Lawrence C. Evans的[Partial Differential Equations (2nd edition)](https://bookstore.ams.org/gsm-19-r/){:.cursive}的附录部分。
+以下三部分内容取自Lawrence C. Evans的[Partial Differential Equations (2nd edition)](https://bookstore.ams.org/gsm-19-r/){:.cursive}的附录部分。
+
 ### 不等式
 <iframe 
   src="/files/ineq.pdf"
